@@ -1,0 +1,19 @@
+# Large data files
+raw/
+*.npz
+*.pth
+*.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+venv/
+.venv/
+
+# System
+.DS_Store
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,221 @@
+BT YOUNG SCIENTIST 2027 - PROJECT TASK LIST
+============================================
+
+Project Title: Evaluating Logical Reasoning in AI: A Chess-Based Comparison of Neural Networks and Large Language Models
+
+Research Question: Do LLMs reason logically, or just pattern match? How does their reasoning compare to purpose-built neural networks?
+
+Estimated Total Time: 3-4 months
+
+Key Deadlines:
+- Entry opens: ~September 2026
+- Entry deadline: ~Late September 2026
+- Exhibition: January 2027
+
+============================================
+PHASE 1: RESEARCH & PLANNING (2-3 weeks)
+============================================
+[ ] Define research question and hypothesis
+[ ] Literature review - chess AI (AlphaZero, Leela Chess Zero, Stockfish NNUE)
+[ ] Literature review - LLM reasoning (chain-of-thought, logical reasoning benchmarks)
+[ ] Study BT Young Scientist entry requirements and judging criteria
+[ ] Design experimental methodology
+[ ] Define evaluation metrics (MAE, accuracy, reasoning correctness score)
+[ ] Create project timeline/Gantt chart
+[ ] Set up version control (GitHub) for code
+
+============================================
+PHASE 2: DATA COLLECTION (1-2 weeks)
+============================================
+[ ] Collect 1M balanced positions from Lichess (depth 40+, +/-10 pawns)
+[ ] Create tactical test set (500 positions - forks, pins, skewers, mates)
+[ ] Create positional test set (500 positions - pawn structure, piece activity)
+[ ] Create paradoxical test set (200 positions - sacrifices, zugzwang, fortresses)
+[ ] Create endgame test set (500 positions - theoretical endgames)
+[ ] Create opening test set (300 positions - common openings)
+[ ] Validate all test sets with Stockfish ground truth
+[ ] Split data into train/validation/test sets
+
+============================================
+PHASE 3: MODEL DEVELOPMENT (3-4 weeks)
+============================================
+
+Neural Networks:
+[ ] Train MLP models (small, medium, large)
+[ ] Train CNN models (shallow, medium, deep)
+[ ] Train ResNet models (small, medium, large)
+[ ] Train Transformer models (small, medium, large)
+[ ] Train specialized models (SE-ResNet, DenseNet, NNUE)
+
+Large Language Models:
+[ ] Fine-tune Phi-3.5 on chess evaluation
+[ ] Fine-tune Llama 3.2 on chess evaluation
+[ ] Fine-tune Qwen 2.5 on chess evaluation
+[ ] Fine-tune Mistral on chess evaluation
+
+[ ] Save all model checkpoints
+[ ] Document training hyperparameters
+
+============================================
+PHASE 4: EXPERIMENTS (2-3 weeks)
+============================================
+[ ] Run accuracy benchmarks on all models (all test sets)
+[ ] Measure inference speed for all models
+[ ] Test generalization (train on middlegame, test on endgame)
+[ ] Collect LLM reasoning explanations (1000+ positions)
+[ ] Human evaluation of LLM reasoning quality
+[ ] Test edge cases and failure modes
+[ ] Compare to Stockfish at various depths
+[ ] Statistical significance testing
+
+============================================
+PHASE 5: ANALYSIS (2 weeks)
+============================================
+[ ] Calculate all metrics (MAE, accuracy, correlation)
+[ ] Analyze which architectures perform best and why
+[ ] Categorize LLM reasoning errors
+[ ] Identify position types where models fail
+[ ] Compare specialized vs general-purpose models
+[ ] Draw conclusions about reasoning capabilities
+
+============================================
+PHASE 6: VISUALIZATIONS (1-2 weeks)
+============================================
+[ ] Accuracy comparison bar charts
+[ ] Training loss curves
+[ ] Confusion matrices by position type
+[ ] Heatmaps of model performance
+[ ] Speed vs accuracy scatter plots
+[ ] Reasoning quality breakdown charts
+[ ] Example positions with model predictions
+
+============================================
+PHASE 7: DOCUMENTATION (2-3 weeks)
+============================================
+[ ] Write abstract (300 words)
+[ ] Write introduction and background
+[ ] Write methodology section
+[ ] Write results section
+[ ] Write discussion and conclusions
+[ ] Write future work section
+[ ] Create references/bibliography
+[ ] Proofread and edit
+[ ] Get teacher/mentor review
+
+============================================
+PHASE 8: PRESENTATION (2 weeks)
+============================================
+[ ] Design display board layout
+[ ] Print display board materials
+[ ] Build live demo application
+[ ] Prepare 3-minute presentation pitch
+[ ] Prepare for judge Q&A
+[ ] Practice explaining to non-technical audience
+[ ] Create backup materials (printouts, USB)
+
+============================================
+PHASE 9: SUBMISSION
+============================================
+[ ] Complete online entry form
+[ ] Upload project report
+[ ] Submit before deadline
+[ ] Confirm entry received
+
+============================================
+MODELS TO COMPARE
+============================================
+
+Neural Networks (16 models):
+1. mlp_small - Small MLP (256 hidden) - 200K params
+2. mlp_medium - Medium MLP (512-256) - 400K params
+3. mlp_large - Large MLP (1024-512-256) - 1M params
+4. cnn_shallow - Shallow CNN (2 layers) - 500K params
+5. cnn_medium - Medium CNN (3 layers) - 13M params
+6. cnn_deep - Deep CNN (5 layers) - 25M params
+7. resnet_small - Small ResNet (4 blocks) - 600K params
+8. resnet_medium - Medium ResNet (8 blocks) - 3M params
+9. resnet_large - Large ResNet (16 blocks) - 20M params
+10. transformer_small - Small Transformer (4 layers) - 1M params
+11. transformer_medium - Medium Transformer (6 layers) - 5M params
+12. transformer_large - Large Transformer (8 layers) - 20M params
+13. se_resnet - SE-ResNet with attention - 4M params
+14. densenet - DenseNet (6 blocks) - 2M params
+15. cnn_attention - CNN + Attention hybrid - 8M params
+16. nnue - NNUE-style (Stockfish architecture) - 500K params
+
+Large Language Models (4 models):
+1. Phi-3.5-mini-instruct (3.8B params)
+2. Llama-3.2-3B-Instruct (3B params)
+3. Qwen2.5-3B-Instruct (3B params)
+4. Mistral-7B-Instruct (7B params)
+
+============================================
+TEST POSITION CATEGORIES
+============================================
+
+1. Tactical (500 positions)
+   - Forks, pins, skewers
+   - Back rank mates
+   - Discovered attacks
+   - Combinations
+
+2. Positional (500 positions)
+   - Pawn structure evaluation
+   - Piece activity
+   - King safety
+   - Space advantage
+
+3. Paradoxical (200 positions)
+   - Queen sacrifices
+   - Zugzwang positions
+   - Fortress positions
+   - Counterintuitive evaluations
+
+4. Endgame (500 positions)
+   - King and pawn endings
+   - Rook endings
+   - Minor piece endings
+   - Theoretical draws/wins
+
+5. Opening (300 positions)
+   - Common opening positions
+   - Gambit positions
+   - Early middlegame transitions
+
+============================================
+EVALUATION METRICS
+============================================
+
+Quantitative:
+- MAE (Mean Absolute Error) in centipawns
+- Accuracy within 50cp, 100cp, 200cp
+- Correlation coefficient with Stockfish
+- Inference speed (positions/second)
+
+Qualitative (LLMs only):
+- Reasoning correctness score (0-5)
+- Feature identification accuracy
+- Logical consistency of explanation
+- Hallucination rate
+
+============================================
+COMMANDS
+============================================
+
+Download positions:
+python3 scripts/download_lichess_evals.py --stream --limit 1000000 --min-depth 40 --max-score 1000 --skip-mates -o ./raw/chess_quality
+
+Consolidate to TSV:
+python3 consolidate.py
+
+Train all neural networks:
+python3 scripts/train_eval_model.py --data ./raw/chess_quality.tsv --compare mlp_small,mlp_medium,mlp_large,cnn_shallow,cnn_medium,cnn_deep,resnet_small,resnet_medium,resnet_large,transformer_small,transformer_medium,transformer_large,se_resnet,densenet,cnn_attention,nnue
+
+Prepare LLM training data:
+python3 prepare_llm_data.py --limit 1000000 --min-depth 40 --format alpaca --split 0.05
+
+Train LLM (local):
+python3 train_llm_local.py --data chess_llm_alpaca_1000000_train.jsonl --model phi
+
+Train LLM (Colab):
+Upload train_chess_llm_colab.ipynb to Google Colab

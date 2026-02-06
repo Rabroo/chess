@@ -1,0 +1,38 @@
+network:
+  timeout: 10
+  retries: 3
+  retry_backoff: 2
+  user_agent: "UniversalScraper/1.0"
+
+rate_limits:
+  global_max_rps: 2
+  images_max_rps: 1
+  chess_max_rps: 2
+  numeric_max_rps: 2
+  experiments_max_rps: 1
+  social_max_rps: 0.5
+
+storage:
+  max_file_size_mb: 50
+  disk_space_min_mb: 500
+  log_rotation_mb: 10
+  log_backup_count: 5
+
+concurrency:
+  max_workers: 5
+  queue_size: 100
+
+modules:
+  images:
+    default_limit: 100
+    allowed_content_types:
+      - image/jpeg
+      - image/png
+  chess:
+    default_limit: 500
+  numeric:
+    default_limit: 1000
+  experiments:
+    default_limit: 50
+  social:
+    default_limit: 200

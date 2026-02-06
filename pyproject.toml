@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-data-scraper"
+version = "1.0.0"
+description = "A modular, extensible scraping system for diverse data types"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "requests>=2.31.0",
+    "aiohttp>=3.9.0",
+    "pydantic>=2.5.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.66.0",
+    "python-dateutil>=2.8.0",
+    "aiofiles>=23.2.0",
+    "ddgs>=7.0.0",
+    "chess>=1.10.0",
+    "stockfish>=3.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+]
+optional = [
+    "authlib>=1.2.0",
+    "beautifulsoup4>=4.12.0",
+    "opencv-python>=4.8.0",
+]
+
+[project.scripts]
+scrape = "scraper.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scraper*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
